@@ -3,6 +3,7 @@ package edu.iesam.presentation;
 import edu.iesam.data.VideojuegosDataRepository;
 import edu.iesam.data.VideojuegosMemLocalDataSource;
 import edu.iesam.domain.AddVideojuegoUseCase;
+import edu.iesam.domain.DeleteVideojuegoUseCase;
 import edu.iesam.domain.GetVideojuegoUseCase;
 import edu.iesam.domain.Videojuegos;
 
@@ -12,6 +13,11 @@ public class VideojuegosView {
     public static void AddVideojuego(){
         AddVideojuegoUseCase addVideojuegoUseCase=new AddVideojuegoUseCase(new VideojuegosDataRepository(VideojuegosMemLocalDataSource.newInstance()));
         Videojuegos videojuegos=new Videojuegos("omar","dole","1");
+    }
+
+    public  static  void DeleteVideojuego() {
+        DeleteVideojuegoUseCase deleteVideojuego = new DeleteVideojuegoUseCase(new VideojuegosDataRepository(VideojuegosMemLocalDataSource.newInstance()));
+        deleteVideojuego.DeleteVideojuegoUseCase("1");
     }
 
     public static  void Getusecase(){
@@ -26,5 +32,9 @@ public class VideojuegosView {
     }
     public  static  void function2(){
         AddVideojuego();
+    }
+
+    public  static  void function3(){
+        DeleteVideojuego();
     }
 }

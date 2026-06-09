@@ -8,5 +8,6 @@ public class Main {
     static void main() {
         VideojuegosView.function1();
         VideojuegosView.function2();
+        VideojuegosView.function3();
     }
 }
