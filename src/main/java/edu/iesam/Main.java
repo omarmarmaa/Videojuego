@@ -7,5 +7,6 @@ import edu.iesam.presentation.VideojuegosView;
 public class Main {
     static void main() {
         VideojuegosView.function1();
+        VideojuegosView.function2();
     }
 }
